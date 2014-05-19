@@ -1,4 +1,4 @@
-angular.module( 'ngBoilerplate', [
+angular.module( 'cmac', [
   'templates-app',
   'templates-common',
   'ngBoilerplate.home',
@@ -8,9 +8,18 @@ angular.module( 'ngBoilerplate', [
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {
   $urlRouterProvider.otherwise( '/home' );
+  
+  $stateProvider
+  
+  .state('playground', {
+  	url: '/playground',
+  	
+  })
 })
 
+
 .run( function run () {
+	
 })
 
 .controller( 'AppCtrl', function AppCtrl ( $scope, $location ) {
