@@ -1,20 +1,15 @@
 angular.module( 'cmac', [
   'templates-app',
   'templates-common',
-  'ngBoilerplate.home',
-  'ngBoilerplate.about',
+  'cmac.home',
+  'cmac.about',
+  'cmac.playground',
   'ui.router'
 ])
 
-.config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {
+.config( function myAppConfig ( $stateProvider, $urlRouterProvider ) { 
   $urlRouterProvider.otherwise( '/home' );
   
-  $stateProvider
-  
-  .state('playground', {
-  	url: '/playground',
-  	
-  })
 })
 
 
@@ -25,7 +20,7 @@ angular.module( 'cmac', [
 .controller( 'AppCtrl', function AppCtrl ( $scope, $location ) {
   $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
     if ( angular.isDefined( toState.data.pageTitle ) ) {
-      $scope.pageTitle = toState.data.pageTitle + ' | ngBoilerplate' ;
+      $scope.pageTitle = toState.data.pageTitle + ' | cmac' ;
     }
   });
 })
