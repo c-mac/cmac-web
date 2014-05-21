@@ -1,9 +1,9 @@
 angular.module( 'cmac', [
   'templates-app',
   'templates-common',
-  'cmac.home',
-  'cmac.about',
-  'cmac.playground',
+  'home',
+  'about',
+  'playground',
   'ui.router'
 ])
 
