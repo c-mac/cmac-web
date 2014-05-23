@@ -5,7 +5,8 @@
 angular.module( 'playground', [
   'ui.router',
   'ui.bootstrap',
-  'playground.scrabble'
+  'playground.scrabble',
+  'playground.spoonerize'
 ])
 
 .config(function ($stateProvider) {
