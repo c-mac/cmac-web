@@ -36,41 +36,51 @@
 		</script>
 	</head>
 	<body>
-		<div class="container">
-			<div class="navbar navbar-default">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" ng-init="menuCollapsed = true"
-					ng-click="menuCollapsed = ! menuCollapsed">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<div class="navbar-brand">
-						<small> <a href="http://github.com/ngbp/ngbp/blob/v<%= version %>-release/CHANGELOG.md"> <%= version %> </a> </small>
+		<div class="wrapper">
+			<div class="header">
+				<div class="row">
+					<div class="col-sm-6 col-lg-3">
+						<a href ui-sref="home"> <i class="fa fa-home fa-5x"></i> </a>
+						<strong>
+						<p>
+							Home
+						</p></strong>
+					</div>
+					<div class="col-sm-6 col-lg-3">
+						<a href ui-sref="about"> <i class="fa fa-user fa-5x"></i> </a>
+						<strong>
+						<p>
+							About
+						</p></strong>
+					</div>
+					<div class="col-sm-6 col-lg-3">
+						<a href ui-sref="playground"> <i class="fa fa-rocket fa-5x"></i> </a>
+						<strong>
+						<p>
+							Playground
+						</p></strong>
+					</div>
+					<div class="col-sm-6 col-lg-3">
+						<a href ui-sref="blog"> <i class="fa fa-rss-square fa-5x"></i> </a>
+						<strong>
+						<p>
+							Blog
+						</p></strong>
 					</div>
 				</div>
-				<div class="collapse navbar-collapse" collapse="menuCollapsed">
-					<ul class="nav navbar-nav">
-						<li ui-sref-active="active">
-							<a href ui-sref="home"> <i class="fa fa-home"></i> Home </a>
-						</li>
-						<li ui-sref-active="active">
-							<a href ui-sref="playground"> <i class="fa fa-info-circle"></i> Playground </a>
-						</li>
-						<li ui-sref-active="active">
-							<a href ui-sref="about"> <i class="fa fa-flag"></i> About </a>
-						</li>
-					</ul>
-				</div>
 			</div>
-		</div>
 
-		<div class="container" ui-view="main"></div>
+			<hr>
 
-		<footer class="footer">
-			<div class="container">
-				<div class="footer-inner">
+			<div ui-view="main"></div>
+
+			<footer class="footer">
+				<div class="navbar navbar-fixed-bottom">
+					<p class="pull-left">
+						(c) 2014 <a href="http://www.cameronmccallie.com">Cameron McCallie</a>.
+						This site is built from
+						<a href="https://github.com/ngbp/ngbp">ngbp!</a>
+					</p>
 					<ul class="social">
 						<li>
 							<a target="_blank" href="http://twitter.com/c_mac"><i class="fa fa-twitter"></i></a>
@@ -82,15 +92,10 @@
 							<a target="_blank" href="https://github.com/c-mac/cmac-web"><i class="fa fa-github"></i></a>
 						</li>
 					</ul>
-
-					<p>
-						(c) 2014 <a href="http://www.cameronmccallie.com">Cameron McCallie</a>.
-						This site is built from
-						<a href="https://github.com/ngbp/ngbp">ngbp!</a>
-					</p>
 				</div>
-			</div>
-		</footer>
+			</footer>
+		</div>
+
 		<script src="http://localhost:35729/livereload.js"></script>
 	</body>
 </html>

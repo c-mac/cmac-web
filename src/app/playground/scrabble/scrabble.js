@@ -5,6 +5,7 @@ angular.module('playground.scrabble', [])
 	this.letters = ScrabbleService.getLetters();
 
 	this.getLetterValue = function(letter) {
+		letter = angular.lowercase(letter);
 		for (var i = 0; i < this.letters.length; i++) {
 			if (this.letters[i].name === letter) {
 				return this.letters[i].value;

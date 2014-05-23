@@ -21,6 +21,19 @@
 @import 'variables.less';
 
 
+
+/**
+ *   Body
+ */
+
+.ng-scope {
+  background-color: @primaryFaded;
+}
+
+.wrapper {
+    background-color:@primaryFaded;
+}
+
 /**
  * Typography
  */
@@ -64,41 +77,26 @@ h2 {
 
 
 /**
- * Navigation
- */
-
-.navbar {
-  margin-top: 20px;
-  
-  small {
-    font-size: 60%;
-  }
-}
-
-
-/**
  * Footer
  */
 
 .footer {
-  margin-top: 80px;
-
   .footer-inner {
-    padding: 40px 0;
-    border-top: 1px solid #DDD;
+    padding: 20px 0;
+    
   }
 
   .social {
     float: right;
-    margin: 0;
+    margin-right: 100px;
     list-style: none;
 
     li {
       float: left;
-      margin-left: 20px;
+      margin-left: 40px;
 
       a, a:visited {
-        color: @gray-light;
+        color: @cornerFaded;
         text-decoration: none;
         font-size: 40px;
         .transition( 250ms ease-in-out );
@@ -109,14 +107,64 @@ h2 {
       }
     }
   }
+  
+  p {
+    margin-top: 20px;
+    margin-left: 40px;
+  }
 }
 
-@defaultRadius:30px;
+.navbar {
+  background-color:@primaryFaded;
+  text-align: center;
+}
+
+hr {
+  background-color:black;
+  border:0;
+  height:2px;
+  margin: 30px 110px 0 110px;
+}
+
+
+/**
+ *   Header
+ */
+
+.header {
+  margin-top: 40px;
+  background-color:@primaryFaded;
+  padding-top: 20px;
+  
+  .fa-5x{
+    width: 136px;
+  }
+  
+  .col-sm-6.col-lg-3 {
+    text-align: center;
+    color: @primaryDark;
+    
+    i {
+      border: 3px @primaryDark solid;
+      padding: 30px;
+      .Round(9999px);
+      margin-bottom:10px;
+    }
+  }
+}
+
 .Round(@radius:@defaultRadius){
     -webkit-border-radius:@radius;
        -moz-border-radius:@radius;
             border-radius:@radius;   
 }
+
+.container {
+  background-color:@primaryFaded;
+  text-align: center;
+  top: 50%;
+}
+
 
 
 /**
