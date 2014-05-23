@@ -7,6 +7,7 @@ angular.module( 'playground', [
   'ui.bootstrap',
   'playground.scrabble'
 ])
+
 .config(function ($stateProvider) {
   $stateProvider.state( 'playground', {
     url: '/playground',

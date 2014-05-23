@@ -278,13 +278,15 @@ module.exports = function ( grunt ) {
         'Gruntfile.js'
       ],
       options: {
+      	smarttabs: true,
         curly: true,
         immed: true,
         newcap: true,
         noarg: true,
         sub: true,
         boss: true,
-        eqnull: true
+        eqnull: true,
+        "-W099": true
       },
       globals: {}
     },
@@ -437,7 +439,7 @@ module.exports = function ( grunt ) {
         files: 'Gruntfile.js',
         tasks: [ 'jshint:gruntfile' ],
         options: {
-          livereload: false
+          livereload: true
         }
       },
 
