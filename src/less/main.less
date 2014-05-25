@@ -31,7 +31,7 @@
 }
 
 .wrapper {
-    background-color:@primaryFaded;
+  background-color: @primaryFaded;
 }
 
 /**
@@ -97,7 +97,6 @@ h2 {
 
       a, a:visited {
         color: @cornerFaded;
-        text-decoration: none;
         font-size: 40px;
         .transition( 250ms ease-in-out );
 
@@ -123,7 +122,7 @@ hr {
   background-color:black;
   border:0;
   height:2px;
-  margin: 30px 110px 0 110px;
+  margin: 40px 90px 0 90px;
 }
 
 
@@ -149,6 +148,7 @@ hr {
       padding: 30px;
       .Round(9999px);
       margin-bottom:10px;
+      text-decoration: 0;
     }
   }
 }
@@ -157,12 +157,6 @@ hr {
     -webkit-border-radius:@radius;
        -moz-border-radius:@radius;
             border-radius:@radius;   
-}
-
-.container {
-  background-color:@primaryFaded;
-  text-align: center;
-  top: 50%;
 }
 
 
@@ -176,3 +170,4 @@ hr {
 
 @import '../app/home/home.less';
 @import '../app/playground/playground.less';
+@import '../app/about/about.less';

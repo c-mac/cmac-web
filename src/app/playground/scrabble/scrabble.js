@@ -1,5 +1,18 @@
 angular.module('playground.scrabble', [])
 
+.config(function ($stateProvider) {
+  $stateProvider.state( 'scrabble', {
+    url: '/playground/scrabble',
+    views: {
+      "main": {
+        controller: 'ScrabbleCtrl',
+        templateUrl: 'playground/scrabble/scrabble.tpl.html'
+      }
+    },
+    data:{ pageTitle: 'Scrabble' }
+  });
+})
+
 .controller('ScrabbleCtrl', function($scope, ScrabbleService) {
 
 	this.letters = ScrabbleService.getLetters();

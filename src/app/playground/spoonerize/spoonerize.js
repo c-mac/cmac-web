@@ -1,5 +1,18 @@
 angular.module('playground.spoonerize', [])
 
+.config(function ($stateProvider) {
+	$stateProvider.state('spoonerize', {
+		url: '/playground/spoonerize',
+    views: {
+      "main": {
+        controller: 'ScrabbleCtrl',
+        templateUrl: 'playground/spoonerize/spoonerize.tpl.html'
+      }
+    },
+    data:{ pageTitle: 'Spoonerize' }
+	});
+})
+
 .controller('SpoonerizeCtrl', function($scope) {
 	this.output = "";
 	
