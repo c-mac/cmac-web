@@ -5,7 +5,7 @@ angular.module('playground.scrabble', [])
     url: '/playground/scrabble',
     views: {
       "main": {
-        controller: 'ScrabbleCtrl',
+        controller: 'ScrabbleCtrl as scrabble',
         templateUrl: 'playground/scrabble/scrabble.tpl.html'
       }
     },
@@ -39,14 +39,14 @@ angular.module('playground.scrabble', [])
 	};
 })
 
-.directive('cmScrabbleize', function() {
-	return {
-		restrict : 'E',
-		templateUrl : 'playground/scrabble/scrabble.tpl.html',
-		controller : 'ScrabbleCtrl',
-		controllerAs : 'scrabble'
-	};
-})
+// .directive('cmScrabbleize', function() {
+	// return {
+		// restrict : 'E',
+		// templateUrl : 'playground/scrabble/scrabble.tpl.html',
+		// controller : 'ScrabbleCtrl',
+		// controllerAs : 'scrabble'
+	// };
+// })
 
 .service('ScrabbleService', function() {
 	

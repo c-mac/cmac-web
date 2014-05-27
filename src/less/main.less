@@ -81,11 +81,6 @@ h2 {
  */
 
 .footer {
-  .footer-inner {
-    padding: 20px 0;
-    
-  }
-
   .social {
     float: right;
     margin-right: 100px;
@@ -96,7 +91,7 @@ h2 {
       margin-left: 40px;
 
       a, a:visited {
-        color: @cornerFaded;
+        color: @primaryDark;
         font-size: 40px;
         .transition( 250ms ease-in-out );
 
@@ -116,6 +111,7 @@ h2 {
 .navbar {
   background-color:@primaryFaded;
   text-align: center;
+  margin-left: 70px;
 }
 
 hr {
@@ -148,7 +144,6 @@ hr {
       padding: 30px;
       .Round(9999px);
       margin-bottom:10px;
-      text-decoration: 0;
     }
   }
 }
@@ -159,6 +154,18 @@ hr {
             border-radius:@radius;   
 }
 
+.img-home {
+  width: 84%;
+  height: 50%;
+  opacity: .7;
+  &:hover {
+    opacity: .3;
+  }
+}
+
+.col-md-12 {
+  margin: 50px 100px 90px 100px;
+}
 
 
 /**

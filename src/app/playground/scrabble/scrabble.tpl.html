@@ -1,5 +1,12 @@
+<div class="col-lg-12">
+<strong><p>Scrabbleizer is a simple tool that lets you enter a word and see how many points it would be worth in a game of Scrabble.
+	<br> 
+	Please don't sue me, Hasbro! This is just for fun.</p></strong>	
+</div>
+
+
 <div class="game-container">
-	<div class="col-md-6">
+	<div class="col-md-9">
 		<label>Score me:</label>
 		<div class="controls">
 			<input type="text" ng-model="scrabble.word" ng-change="scrabble.scoreWord()">
@@ -10,18 +17,16 @@
 		<button class="btn btn-primary" ng-click="scrabble.clearWord()">
 			Clear
 	</div>
-	<div class="col-md-6">
+	<div class="col-md-3">
 		<table class="table table-bordered">
 			<th>Letter</th>
 			<th>Point Value</th>
-			<th>Bonus?</th>
-
+			<!-- <th>Bonus?</th> -->
 			<tbody>
 				<tr ng-repeat="letter in scrabble.word track by $index">
 					<td>{{letter}}</td>
 					<td>{{scrabble.getLetterValue(letter)}}</td>
-					<td>{{scrabble.word}}</td>
-				</tr>
+					<!-- <td>{{scrabble.word}}</td> -->				</tr>
 			</tbody>
 		</table>
 	</div>

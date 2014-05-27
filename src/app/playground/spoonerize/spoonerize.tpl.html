@@ -1,15 +1,31 @@
+<div class="col-lg-12">
+	<strong>
+	<p>
+		A <a href="http://en.wikipedia.org/wiki/Spoonerism">spoonerism</a> is an error in speech or deliberate play on words
+		in which corresponding consonants, vowels, or morphemes are switched (see metathesis) between two words in a phrase.
+
+		<br>
+
+		My implentation merely swaps the beginning letters, but making it smarter is on my to-do list!
+	</p></strong>
+</div>
+
 <div class="game-container">
-	<div class="col-xs-12">
-		<label>{{spoon.output}}</label>
-		<br/>
-		<div class="controls">
+	<div class="col-md-6">
+		<form id="spoonform">
 			<input type="text" ng-model="spoon.wordOne">
 			<input type="text" ng-model="spoon.wordTwo">
-		</div>
 
-		<br/>
-		<button class="btn btn-primary" ng-click="spoon.spoonerize()">
-			Spoonerize
-		</button>
+			<br/>
+			<br/>
+			
+			<button class="btn btn-primary" ng-click="spoon.spoonerize()">
+				Spoonerize
+			</button>
+		</form>
+
+	</div>
+	<div class="col-md-6">
+		<label>Your spoonerism: &#9; {{spoon.output}}</label>
 	</div>
 </div>
