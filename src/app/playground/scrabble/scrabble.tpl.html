@@ -6,7 +6,7 @@
 
 
 <div class="game-container">
-	<div class="col-md-9">
+	<div class="col-md-3">
 		<label>Score me:</label>
 		<div class="controls">
 			<input type="text" ng-model="scrabble.word" ng-change="scrabble.scoreWord()">
@@ -17,18 +17,8 @@
 		<button class="btn btn-primary" ng-click="scrabble.clearWord()">
 			Clear
 	</div>
-	<div class="col-md-3">
-		<table class="table table-bordered">
-			<th>Letter</th>
-			<th>Point Value</th>
-			<!-- <th>Bonus?</th> -->
-			<tbody>
-				<tr ng-repeat="letter in scrabble.word track by $index">
-					<td>{{letter}}</td>
-					<td>{{scrabble.getLetterValue(letter)}}</td>
-					<!-- <td>{{scrabble.word}}</td> -->				</tr>
-			</tbody>
-		</table>
+	<div class="col-md-9">
+		<cm-letters></cm-letters>
 	</div>
 </div>
 

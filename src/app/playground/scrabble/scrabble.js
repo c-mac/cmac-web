@@ -2,7 +2,6 @@ angular.module('playground.scrabble', [])
 
 .config(function ($stateProvider) {
   $stateProvider.state( 'scrabble', {
-    url: '/playground/scrabble',
     views: {
       "main": {
         controller: 'ScrabbleCtrl as scrabble',
@@ -16,12 +15,19 @@ angular.module('playground.scrabble', [])
 .controller('ScrabbleCtrl', function($scope, ScrabbleService) {
 
 	this.letters = ScrabbleService.getLetters();
+	this.bonuses = ScrabbleService.getBonuses();
+	this.bonus = "cool";
 
 	this.getLetterValue = function(letter) {
 		letter = angular.lowercase(letter);
 		for (var i = 0; i < this.letters.length; i++) {
 			if (this.letters[i].name === letter) {
-				return this.letters[i].value;
+				if (letter.bonus === "DLS") {
+					return this.letters[i].value*2;
+				}
+				else {
+					return this.letters[i].value;
+				}
 			}
 		}
 	};
@@ -37,16 +43,11 @@ angular.module('playground.scrabble', [])
 			this.wordScore += this.getLetterValue(this.word[j]);
 		}
 	};
+	
+	this.applyBonus = function() {
+		console.log(this.bonus);
+	};
 })
-
-// .directive('cmScrabbleize', function() {
-	// return {
-		// restrict : 'E',
-		// templateUrl : 'playground/scrabble/scrabble.tpl.html',
-		// controller : 'ScrabbleCtrl',
-		// controllerAs : 'scrabble'
-	// };
-// })
 
 .service('ScrabbleService', function() {
 	
@@ -66,5 +67,25 @@ angular.module('playground.scrabble', [])
 			return this.letters;
 		};	
 		
-});
+		this.bonuses = [
+			{name : 'DLS'},
+			{name : 'TLS'}
+		];
+		
+		this.getBonuses = function() {
+			return this.bonuses;
+		};
+})
+
+.directive('cmLetters', function() {
+	return {
+		restrict: 'E',
+		templateUrl: 'playground/scrabble/letter.tpl.html',
+		controller: function($scope) {
+			
+		},
+		controllerAs: 'letters'
+	}
+})
+;
  
