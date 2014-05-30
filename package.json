@@ -33,6 +33,6 @@
     "grunt-karma": "^0.8.3",
     "karma-coffee-preprocessor": "^0.2.1",
     "karma": "^0.12.16",
-    "grunt-s3": "^0.2.0-alpha.3"
+    "grunt-aws-s3": "^0.8.6"
   }
 }
