@@ -470,11 +470,8 @@ module.exports = function(grunt) {
 				region : 'us-east-1'
 			},
 			development : {
-				options : {
-					differential: true
-				},
 				files : [
-					{dest : '', cwd : 'bin', src : ['**'], expand: true}
+					{cwd : 'bin', src : ['**'], expand: true, dest : ['hello']}
 				]
 			}
 		}
