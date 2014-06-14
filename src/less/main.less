@@ -114,14 +114,6 @@ h2 {
   margin-left: 70px;
 }
 
-hr {
-  background-color:black;
-  border:0;
-  height:2px;
-  margin: 40px 90px 0 90px;
-}
-
-
 /**
  *   Header
  */
@@ -135,10 +127,9 @@ hr {
     width: 136px;
   }
   
-  .col-sm-6.col-lg-4 {
+  .header-nav {
     text-align: center;
     color: @primaryDark;
-    
     i {
       border: 3px @primaryDark solid;
       padding: 30px;
@@ -155,33 +146,18 @@ hr {
 }
 
 .img-home {
-  width: 84%;
-  height: 50%;
   opacity: .7;
-  &:hover {
-    opacity: .3;
-  }
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-.col-md-12 {
-  margin: 50px 100px 10px 100px;
-}
-
-@media screen and (max-width: 768px) {
-  .mobile {
-    display: none;
-  }
-}
-
-.game-container {
-  margin: 40px 90px 90px 90px;
-  overflow: hidden;
-  position: relative;
-  padding: 10px;
-  padding-bottom: 60px;
+.cm-border {
+  border: 3px @primaryDark solid;
   .Round;
-  font-size:20px;
+  padding: 20px;
 }
+
 
 
 

@@ -1,26 +1,26 @@
-<div class="col-lg-12">
-	<strong>
-	<p>
-		Scrabbleizer is a simple tool that lets you enter a word and see how many points it would be worth in a game of Scrabble.
-		<br>
-		Please don't sue me, Hasbro! This is just for fun.
-	</p></strong>
-</div>
+<div class="container">
+	<div class="row cm-border">
+		<strong>
+		<p style="text-align:center;">
+			Scrabbleizer is a simple tool that lets you enter a word and see how many points it would be worth in a game of Scrabble.
+			<br>
+			Please don't sue me, Hasbro! This is just for fun.
+		</p></strong>
 
-<div class="game-container">
-	<div class="col-md-3">
-		<label>Score me:</label>
-		<div class="controls">
-			<input type="text" ng-model="scrabble.input" ng-change="scrabble.wordChanged()">
-			<label>{{scrabble.wordScore}}</label>
+		<div class="col-lg-3">
+			<label>Score me:</label>
+			<div class="controls">
+				<input type="text" ng-model="scrabble.input" ng-change="scrabble.wordChanged()">
+				<label>{{scrabble.wordScore}}</label>
+			</div>
+
+			<br/>
+			<button class="btn btn-primary" ng-click="scrabble.clearWord()">
+				Clear
 		</div>
-
-		<br/>
-		<button class="btn btn-primary" ng-click="scrabble.clearWord()">
-			Clear
-	</div>
-	<div class="col-md-9">
-		<cm-letters></cm-letters>
+		<div class="col-lg-9">
+			<cm-letters></cm-letters>
+		</div>
 	</div>
 </div>
 

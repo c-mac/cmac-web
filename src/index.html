@@ -39,39 +39,37 @@
 		<div class="wrapper">
 			<div class="header">
 				<div class="row">
-					<div class="col-sm-6 col-lg-4">
-						<a href ui-sref="home"> <i class="fa fa-home fa-5x"></i> <strong>
-						<p>
-							Home
-						</p></strong> </a>
+					<div class="header-nav">
+						<div class="col-md-4">
+							<a href ui-sref="home"> <i class="fa fa-home fa-5x"></i> <strong>
+							<p>
+								Home
+							</p></strong> </a>
+						</div>
 					</div>
-					<div class="col-sm-6 col-lg-4">
-						<a href ui-sref="about"> <i class="fa fa-user fa-5x"></i> <strong>
-						<p>
-							About
-						</p></strong> </a>
+					<div class="header-nav">
+						<div class="col-md-4">
+							<a href ui-sref="about"> <i class="fa fa-user fa-5x"></i> <strong>
+							<p>
+								About
+							</p></strong> </a>
+						</div>
 					</div>
-					<div class="col-sm-6 col-lg-4">
-						<a href ui-sref="playground"> <i class="fa fa-rocket fa-5x"></i> <strong>
-						<p>
-							Playground
-						</p></strong> </a>
+					<div class="header-nav">
+						<div class="col-md-4">
+							<a href ui-sref="playground"> <i class="fa fa-rocket fa-5x"></i> <strong>
+							<p>
+								Playground
+							</p></strong> </a>
+						</div>
 					</div>
-					<!-- <div class="col-sm-6 col-lg-3">
-						<a href ui-sref="home" title="Coming Soon!"> <i class="fa fa-rss-square fa-5x"></i> <strong>
-						<p>
-							Blog
-						</p></strong> </a>
-					</div> -->
 				</div>
 			</div>
 
-			<hr>
-
 			<div ui-view="main"></div>
 
-			<footer class="footer">
-				<div class="navbar navbar-fixed-bottom mobile">
+			<footer class="footer hidden-xs hidden-sm">
+				<div class="navbar navbar-fixed-bottom">
 					<p class="pull-left">
 						(c) 2014 <a href="http://www.cameronmccallie.com">Cameron McCallie</a>.
 						This site is bootstrapped from the wonderful
