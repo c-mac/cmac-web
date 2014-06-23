@@ -94,10 +94,10 @@ module.exports = function(grunt) {
 			build_vendor_assets : {
 				files : [{
 					src : ['<%= vendor_files.assets %>'],
-					dest : '<%= build_dir %>/assets/',
+					dest : '<%= build_dir %>/',
 					cwd : '.',
 					expand : true,
-					flatten : true
+					flatten : false
 				}]
 			},
 			build_appjs : {
@@ -432,7 +432,7 @@ module.exports = function(grunt) {
 			 */
 			less : {
 				files : ['src/**/*.less'],
-				tasks : ['less:build']
+				tasks : ['less:build', 'concat:build_css']
 			},
 
 			/**
